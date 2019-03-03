@@ -5,14 +5,18 @@ Based in [https://github.com/vuejs-templates/webpack](https://github.com/vuejs-t
 Author: jonathanslima
 
 *Make sure you have vue-cli installed globaly*
-$ npm install -g vue-cli
+
+- $ npm install -g vue-cli
 
 *Init project*
-$ vue init webpack jvue-project
-$ cd jvue-project
+
+- $ vue init webpack jvue-project
+- $ cd jvue-project
 
 *install dependencies*
-$ npm install
+
+- $ npm install
 
 *run localhost*
-$ npm run dev
+
+- $ npm run dev
