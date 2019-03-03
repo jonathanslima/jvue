@@ -1,0 +1,154 @@
+// Colors
+$black: #333;
+$white: #fff;
+$light-gray: #ccc;
+
+$link-color: #25a9c1;
+$link-color-hv: #1a5f6b;
+
+// Vars
+$font-title-sz: 24px; 
+$font-subtitle-sz: 18px; 
+$main-font: 'ubuntu';
+
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+// reset
+body{
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  font-size: 1em;
+}
+
+.container{ width: 96%; margin: 0 auto }
+ul{ list-style-type: none; }
+
+// Positions
+.center	{ text-align: center; }
+.left	{ text-align: left; }
+.right	{ text-align: right; }
+
+// Helpers
+.grid			{ display: grid }
+.flex			{ display: flex }
+.block			{ display: block }
+.inline-block	{ display: inline-block }
+.inline			{ display: inline }
+.none			{ display: none; }
+
+.section-margin		{ margin-top: 20px !important; margin-bottom: 20px !important}
+.section-padding	{ padding-top: 20px !important; padding-bottom: 20px !important}
+
+.pt-remove			{ padding-top: 0 !important; }
+.pb-remove			{ padding-bottom: 0 !important; }
+.pr-remove			{ padding-right: 0 !important; }
+.pl-remove			{ padding-left: 0 !important; }
+
+.mt-remove			{ margin-top: 0 !important; }
+.mb-remove			{ margin-bottom: 0 !important; }
+.mr-remove			{ margin-right: 0 !important; }
+.ml-remove			{ margin-left: 0 !important; }
+
+.trans		{ transition: 500ms all ease }
+.break-word	{ word-wrap: break-word; }
+.full-width	{ width: 100% }
+
+.total-center{
+	justify-content: center;
+	align-items: center;
+}
+
+.nospace{
+	margin: 0;
+	padding: 0;
+}
+
+// Links
+a{
+	@extend .trans;
+	color: $link-color;
+
+	&:hover, &:focus, &active{
+		color: $link-color-hv;
+		text-decoration: none;
+	}
+}
+
+// Title
+.main-title{
+	color: $black;
+	font-size: $font-title-sz;
+}
+
+.subtitle{
+	color: $black;
+	font-family: $font-subtitle-sz;
+	font-size: 18px;
+}
+
+/* Forms components -----------------------------------------------------------*/
+
+.input{
+	@extend .trans;
+	border: 1px solid $light-gray;
+	border-radius: 3px;
+	padding: 10px;
+	font-family: $main-font;
+
+	&:focus, &:hover, &:active{
+		border-bottom: 1px solid $black;
+	}
+}
+
+.textarea{
+	@extend .trans;
+	border: 1px solid $light-gray;
+	margin-top: 15px;
+
+	&:focus{
+		border: 1px solid $light-gray;
+		padding: 10px;
+	}
+}
+
+.select{
+	-webkit-appearance: none;
+	border-radius: 0;
+	padding: 12px 10px;
+}
+
+.btn{
+	@extend .trans;
+	padding: 10px 20px;
+	color: $white;
+	text-decoration: none;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	background: $black;
+
+	&:hover, &:focus, &:active{
+		opacity: 0.8;
+		box-shadow: none;
+		color: $white;
+	}
+}
+
+/* MEDIA QUERY MOBILE FIRST ------------------------------------------------------------*/
+//
+/* Small devices (smartphones, 480px and up) */
+@media (min-width: $screen-xs-min) {}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+	.container{ width: 80%; margin: 0 auto }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {}
